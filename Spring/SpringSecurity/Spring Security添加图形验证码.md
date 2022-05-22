@@ -40,6 +40,7 @@
 ```
 ### 3.后端添加验证码校验逻辑
 验证码在用户名和密码之前校验，因此需定义过滤器ValidateCodeFilter，在该过滤器中进行验证码的校验逻辑。
+```java
 package evooauth.evooauth.Filter;
 
 import evooauth.evooauth.Controller.LoginController;
@@ -110,8 +111,9 @@ public class ValidateCodeFilter extends OncePerRequestFilter {
 
     }
 }
-
+```
 ### 4.校验失败时，抛异常，这里定义一个验证码校验异常，继承AuthenticationException
+```java
 package evooauth.evooauth.Exception;
 import org.springframework.security.core.AuthenticationException;
 
