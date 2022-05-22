@@ -1,6 +1,6 @@
 # Spring Security自定义用户认证
 
-**1.创建自定义MyUser类，定义各个属性**
+**1.创建自定义MyUser类，用于封装用户登录信息**
 ```java
 package evooauth.evooauth.PO;
 
@@ -30,7 +30,7 @@ public class MyUser {
 }
 
 ```
-**2.定义MyUserDetailService类，实现UserDetailsService类**
+**2.定义MyUserDetailService类，实现UserDetailsService类，用于后面权限校验**
 ```java
 package evooauth.evooauth.Service;
 
@@ -116,7 +116,7 @@ public class BrowserSecurityController {
 }
 
 ```
-**4.定义配置类BrowserSecurityConfig，继承WebSecurityConfigurerAdapter**
+**4.定义配置类BrowserSecurityConfig，继承WebSecurityConfigurerAdapter，用于配置登录页面、登录成功、失败等信息**
 ```java
 package evooauth.evooauth.config;
 
