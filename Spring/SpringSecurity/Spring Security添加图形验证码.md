@@ -129,7 +129,8 @@ public class ValidateCodeException extends AuthenticationException {
         super(message);
     }
 }
-当出现异常时，controller类捕获异常，执行验证码校验失败类的逻辑。
+```
+### 5.当出现异常时，controller类捕获异常，执行验证码校验失败类的逻辑。
 ```java
 package evooauth.evooauth.Handler;
 
@@ -168,7 +169,7 @@ public class MyAuthenticationFailureHandler implements AuthenticationFailureHand
 
 ```
 
-### 4.过滤器ValidateCodeFilter应该在UsernamePasswordAuthenticationFilter过滤器之前过滤，需要在配置类中进行配置。
+### 6.过滤器ValidateCodeFilter应该在UsernamePasswordAuthenticationFilter过滤器之前过滤，需要在配置类中进行配置。
 ```java
 package evooauth.evooauth.config;
 
