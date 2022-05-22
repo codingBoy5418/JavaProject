@@ -56,7 +56,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     public PersistentTokenRepository persistentTokenRepository() {
         JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
         jdbcTokenRepository.setDataSource(dataSource);
-        jdbcTokenRepository.setCreateTableOnStartup(false);
+        jdbcTokenRepository.setCreateTableOnStartup(false);//不自动生产数据库表，需要手动生成
         return jdbcTokenRepository;
     }
 
@@ -116,3 +116,8 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
 ### 3.效果
 
+![111](https://user-images.githubusercontent.com/62679490/169711370-07368474-7660-46c5-8688-399f5d98708e.png)
+
+### 4.注意
+【1】mysql版本要对应上；
+【2】这里是自己手动生成的数据库表；
