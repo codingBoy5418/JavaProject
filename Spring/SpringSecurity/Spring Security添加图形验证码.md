@@ -38,7 +38,7 @@
 </html>
 
 ```
-### 3.后端添加验证码校验逻辑
+### 3.后端添加验证码校验逻辑【过滤器中添加校验逻辑】
 验证码在用户名和密码之前校验，因此需定义过滤器ValidateCodeFilter，在该过滤器中进行验证码的校验逻辑。
 ```java
 package evooauth.evooauth.Filter;
