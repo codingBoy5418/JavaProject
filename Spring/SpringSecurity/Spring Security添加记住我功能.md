@@ -120,4 +120,5 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
 ### 4.注意
 【1】mysql版本要对应上；
+
 【2】这里是自己手动生成的数据库表；
