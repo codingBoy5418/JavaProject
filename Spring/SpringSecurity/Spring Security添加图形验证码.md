@@ -6,7 +6,7 @@
 ```java
 @GetMapping("/generateCode")
     public void generateCode(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        ImageCode imageCode = loginService.generateCode();
+        ImageCode imageCode = loginService.generateCode();//定义验证码对象，包含验证码图片、过期时间(60s)、验证码数值
         sessionStrategy.setAttribute(new ServletWebRequest(request), SESSION_KEY_IMAGE_CPDE, imageCode);//session中添加验证码
         ImageIO.write(imageCode.getBufferedImage(), "jpeg", response.getOutputStream());
     }
